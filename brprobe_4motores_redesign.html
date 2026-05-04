@@ -1,0 +1,132 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Calibri:wght@400;500&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+.w{font-family:'Calibri',var(--font-sans);padding:2rem 0}
+.label{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--color-text-tertiary);margin-bottom:1.25rem}
+.gr{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:1.5rem}
+.mc{border-radius:var(--border-radius-lg);border:.5px solid var(--color-border-tertiary);padding:1.25rem 1rem;cursor:pointer;transition:all .15s;background:var(--color-background-primary)}
+.mc:hover{border-color:var(--color-border-primary);background:var(--color-background-secondary)}
+.mn{font-size:28px;font-weight:500;line-height:1;margin-bottom:6px}
+.mk{font-size:15px;font-weight:500;margin-bottom:4px;color:var(--color-text-primary)}
+.ms{font-size:13px;color:var(--color-text-secondary);line-height:1.5;margin-bottom:10px}
+.mt{font-size:11px;padding:3px 10px;border-radius:20px;display:inline-block;font-weight:500}
+.m1 .mn{color:#0F6E56}.m1.on{background:#E1F5EE;border:1.5px solid #0F6E56}.m1 .mt{background:#E1F5EE;color:#085041}
+.m2 .mn{color:#185FA5}.m2.on{background:#E6F1FB;border:1.5px solid #185FA5}.m2 .mt{background:#E6F1FB;color:#0C447C}
+.m3 .mn{color:#534AB7}.m3.on{background:#EEEDFE;border:1.5px solid #534AB7}.m3 .mt{background:#EEEDFE;color:#3C3489}
+.m4 .mn{color:#854F0B}.m4.on{background:#FAEEDA;border:1.5px solid #854F0B}.m4 .mt{background:#FAEEDA;color:#633806}
+.flow{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:2rem;flex-wrap:wrap;padding:.75rem 1rem;background:var(--color-background-secondary);border-radius:var(--border-radius-lg)}
+.fc{padding:4px 12px;border-radius:20px;font-size:13px;font-weight:500}
+.fa{font-size:13px;color:var(--color-text-tertiary)}
+.fl{font-size:12px;color:var(--color-text-secondary)}
+.det{background:var(--color-background-primary);border-radius:var(--border-radius-lg);border:.5px solid var(--color-border-tertiary);padding:1.75rem}
+.dtop{margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:.5px solid var(--color-border-tertiary)}
+.dtit{font-size:20px;font-weight:500}
+.dsub{font-size:14px;color:var(--color-text-secondary);margin-top:4px;line-height:1.6}
+.obs{font-size:13px;line-height:1.7;padding:14px 16px;border-radius:var(--border-radius-md);margin-bottom:1.5rem;border-left:3px solid}
+.etlabel{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--color-text-tertiary);margin-bottom:1rem}
+.sl{display:flex;flex-direction:column;gap:14px}
+.sr{display:flex;align-items:flex-start;gap:14px}
+.sdot{width:10px;height:10px;border-radius:50%;margin-top:5px;flex-shrink:0}
+.sn{font-size:15px;font-weight:500;color:var(--color-text-primary);margin-bottom:2px}
+.ss{font-size:13px;color:var(--color-text-secondary);line-height:1.6}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.ch{font-size:11px;padding:3px 10px;border-radius:20px;font-weight:500}
+.mb{margin-top:1.5rem;padding:12px 16px;border-radius:var(--border-radius-md);border:.5px solid var(--color-border-secondary);background:var(--color-background-secondary);font-size:13px;color:var(--color-text-secondary);line-height:1.6}
+.divider{height:.5px;background:var(--color-border-tertiary);margin:2rem 0}
+.ph2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:1rem}
+.pc{border-radius:var(--border-radius-lg);padding:1.25rem;border:.5px solid var(--color-border-tertiary);background:var(--color-background-primary)}
+.ph{font-size:13px;font-weight:500;margin-bottom:1rem;padding-bottom:.75rem;border-bottom:.5px solid var(--color-border-tertiary)}
+</style>
+<div class="w">
+<h2 class="sr-only">Redesenho comercial BRProbe: arquitetura de 4 motores de CRM com etapas e critérios de migração</h2>
+
+<div class="label">Arquitetura de motores — clique para explorar</div>
+<div class="gr">
+  <div class="mc m1 on" onclick="sel(1)">
+    <div class="mn">1</div>
+    <div class="mk">Conta Ativa</div>
+    <div class="ms">Ao menos 1 serviço realizado. Relacionamento vivo.</div>
+    <div class="mt">Máximo potencial</div>
+  </div>
+  <div class="mc m2" onclick="sel(2)">
+    <div class="mn">2</div>
+    <div class="mk">Equipamento Confirmado</div>
+    <div class="ms">CNPJ com domínio de equipamento registrado</div>
+    <div class="mt">Alta temperatura</div>
+  </div>
+  <div class="mc m3" onclick="sel(3)">
+    <div class="mn">3</div>
+    <div class="mk">Universo Qualificável</div>
+    <div class="ms">CNAEs aderentes e adjacentes — qualificação necessária</div>
+    <div class="mt">Média temperatura</div>
+  </div>
+  <div class="mc m4" onclick="sel(4)">
+    <div class="mn">4</div>
+    <div class="mk">Captação por Campanhas</div>
+    <div class="ms">Leads de marketing — dados incompletos ou não validados</div>
+    <div class="mt">A qualificar</div>
+  </div>
+</div>
+
+<div class="flow">
+  <span class="fc" style="background:#FAEEDA;color:#633806">Motor 4</span>
+  <span class="fa">→</span><span class="fl">CNPJ + equipamento validados</span><span class="fa">→</span>
+  <span class="fc" style="background:#EEEDFE;color:#3C3489">Motor 3</span>
+  <span class="fa">→</span><span class="fl">equipamento confirmado</span><span class="fa">→</span>
+  <span class="fc" style="background:#E6F1FB;color:#0C447C">Motor 2</span>
+  <span class="fa">→</span><span class="fl">1ª OS realizada</span><span class="fa">→</span>
+  <span class="fc" style="background:#E1F5EE;color:#085041">Motor 1</span>
+</div>
+
+<div class="det" id="det"></div>
+
+<div class="divider"></div>
+
+<div class="label">Motor 1 — fase comercial e fase operacional</div>
+<div class="ph2">
+  <div class="pc" style="border-color:#534AB7">
+    <div class="ph" style="color:#534AB7">Fase comercial — consultor</div>
+    <div class="sl">
+      <div class="sr"><div class="sdot" style="background:#534AB7"></div><div><div class="sn">Demanda identificada</div><div class="ss">Tipo de serviço mapeado: manutenção, reparo, peça, diagnóstico ou suporte</div></div></div>
+      <div class="sr"><div class="sdot" style="background:#534AB7"></div><div><div class="sn">Proposta emitida</div><div class="ss">Proposta formal gerada no Ploomes e enviada ao cliente</div></div></div>
+      <div class="sr"><div class="sdot" style="background:#534AB7"></div><div><div class="sn">Em negociação</div><div class="ss">Ajustes de condições, prazo e escopo com o cliente</div></div></div>
+      <div class="sr"><div class="sdot" style="background:#0F6E56"></div><div><div class="sn">Proposta aprovada</div><div class="ss">Cliente aprova — passagem de bastão iniciada</div><div class="chips"><span class="ch" style="background:#EEEDFE;color:#3C3489">Consultor segue dono do relacionamento</span></div></div></div>
+    </div>
+  </div>
+  <div class="pc" style="border-color:#0F6E56">
+    <div class="ph" style="color:#0F6E56">Fase operacional — técnico / logística / financeiro</div>
+    <div class="sl">
+      <div class="sr"><div class="sdot" style="background:#1D9E75"></div><div><div class="sn">Passagem de bastão</div><div class="ss">Técnico recebe a OS. Consultor mantém comunicação com o cliente</div><div class="chips"><span class="ch" style="background:#E6F1FB;color:#0C447C">Técnico</span><span class="ch" style="background:#EEEDFE;color:#3C3489">Consultor</span></div></div></div>
+      <div class="sr"><div class="sdot" style="background:#1D9E75"></div><div><div class="sn">Análise e diagnóstico</div><div class="ss">Avaliação técnica do equipamento ou da demanda</div><div class="chips"><span class="ch" style="background:#E6F1FB;color:#0C447C">Técnico</span></div></div></div>
+      <div class="sr"><div class="sdot" style="background:#1D9E75"></div><div><div class="sn">Logística e execução</div><div class="ss">Envio, visita técnica ou execução do serviço</div><div class="chips"><span class="ch" style="background:#E6F1FB;color:#0C447C">Técnico</span><span class="ch" style="background:#FAEEDA;color:#633806">Logística</span></div></div></div>
+      <div class="sr"><div class="sdot" style="background:#1D9E75"></div><div><div class="sn">OS concluída e faturamento</div><div class="ss">Serviço encerrado, nota emitida, integração com financeiro</div><div class="chips"><span class="ch" style="background:#EAF3DE;color:#27500A">Financeiro</span></div></div></div>
+      <div class="sr"><div class="sdot" style="background:#0F6E56"></div><div><div class="sn">Fidelização e recorrência</div><div class="ss">Esteira de relacionamento pós-OS ativada. Cadastro completo obrigatório.</div><div class="chips"><span class="ch" style="background:#EEEDFE;color:#3C3489">Consultor</span></div></div></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+var dt={
+  1:{title:"Motor 1 — Conta Ativa",color:"#0F6E56",obsbg:"#E1F5EE",obscol:"#085041",obs:"Entram aqui todos os CNPJs que realizaram ao menos 1 serviço com a BRProbe. O cadastro deve estar completo — CNPJ, e-mail, decisor e telefone — para agilizar vendas futuras e integrações com o financeiro. Leads do Motor 2 que desistiram ou foram marcados como perda retornam ao Motor 2 com histórico preservado, não ao Motor 1.",stages:[{l:"Cadastro completo validado",d:"CNPJ, e-mail, decisor e telefone confirmados antes de qualquer nova proposta",ch:[]},{l:"Nova demanda identificada",d:"Novo ciclo comercial iniciado — cliente já tem histórico na base",ch:["Consultor"]},{l:"Proposta emitida",d:"Proposta gerada a partir do histórico do cliente, com agilidade",ch:["Consultor"]},{l:"OS aprovada e executada",d:"Passagem de bastão para o técnico. Consultor acompanha a experiência",ch:["Técnico","Consultor"]},{l:"Pós-OS e fidelização",d:"Acompanhamento de satisfação, alerta de próxima manutenção, relacionamento contínuo",ch:["Consultor"]}],migrate:null},
+  2:{title:"Motor 2 — Equipamento Confirmado",color:"#185FA5",obsbg:"#E6F1FB",obscol:"#0C447C",obs:"Base de CNPJs com domínio de equipamentos de diagnóstico por imagem registrados em base oficial monitorada. É aqui que os consultores pescam suas melhores oportunidades e onde a agência de marketing realiza ações educativas e de oferta. Leads que abriram demanda e desistiram ou foram marcados como perda permanecem aqui com todo o histórico — não saem do motor.",stages:[{l:"Identificado na base oficial",d:"CNPJ com equipamento registrado — sem necessidade de qualificação prévia",ch:[]},{l:"Abordagem comercial iniciada",d:"Consultor realiza o primeiro contato. Marketing pode apoiar com campanhas direcionadas",ch:["Consultor","Marketing"]},{l:"Demanda identificada",d:"Necessidade de manutenção, reparo, peça ou diagnóstico mapeada",ch:[]},{l:"Proposta emitida",d:"Proposta formal gerada e enviada ao cliente",ch:["Consultor"]},{l:"Em negociação",d:"Ajustes de condições, prazo e escopo",ch:[]},{l:"Proposta aprovada — migra para Motor 1",d:"Primeira OS confirmada. Cliente migra para Conta Ativa",ch:["→ Motor 1"]},{l:"Perda ou desistência",d:"Registro de motivo obrigatório. Cliente permanece no Motor 2 com histórico completo",ch:["Histórico preservado"]}],migrate:"1ª OS realizada → migra para Motor 1. Perda ou desistência → permanece no Motor 2 com histórico."},
+  3:{title:"Motor 3 — Universo Qualificável por CNAEs",color:"#534AB7",obsbg:"#EEEDFE",obscol:"#3C3489",obs:"Base de CNPJs ativos no Brasil com CNAEs primários ou secundários que sugerem uso de equipamentos de imagem. Divididos em prioridade 1 (CNAEs aderentes: 8640-2/07, 8610-1/01, 8610-1/02, 8630-5/02, 8630-5/01) e prioridade 2 (CNAEs adjacentes: 8630-5/07, 7500-1/00, 8630-5/03, 8640-2/05), identificados por campo de classificação. Qualificação via marketing digital para a base ou por abordagem direta dos consultores.",stages:[{l:"Importado na base",d:"CNPJ cadastrado com CNAE classificado — prioridade 1 ou 2 — e status: não qualificado",ch:["Prioridade 1","Prioridade 2"]},{l:"Em qualificação",d:"Ação de marketing ou contato do consultor para confirmar uso de ultrassom na operação",ch:[]},{l:"Qualificação negativa",d:"Empresa não usa equipamentos. Permanece na base como inativa — disponível para campanhas futuras",ch:[]},{l:"Equipamento confirmado — migra para Motor 2",d:"Uso de ultrassom confirmado. CNPJ migra para Motor 2 com registro da confirmação",ch:["→ Motor 2"]}],migrate:"Equipamento confirmado → migra para Motor 2"},
+  4:{title:"Motor 4 — Captação por Campanhas",color:"#854F0B",obsbg:"#FAEEDA",obscol:"#633806",obs:"Leads vindos de campanhas de marketing digital — ebooks, materiais técnicos. Chegam apenas com e-mail e telefone, que podem não ser válidos. Mesmo quando a campanha indica que o lead possui equipamento, essa informação precisa ser validada: o preenchimento pode ter sido feito apenas para acessar o material. Objetivo exclusivo deste motor: qualificar e reclassificar. Leads que não evoluem ficam arquivados aqui.",stages:[{l:"Lead capturado",d:"E-mail e telefone registrados. Origem da campanha identificada",ch:["E-mail","Telefone"]},{l:"Validação de contato",d:"Verificar se e-mail e telefone são válidos e ativos",ch:[]},{l:"Contato inválido",d:"Lead arquivado. Permanece na base para eventual reativação por nova campanha",ch:[]},{l:"Identificação de CNPJ",d:"Enriquecimento de dados: localizar o CNPJ a partir do contato validado",ch:[]},{l:"Vínculo institucional confirmado",d:"Confirmar se o lead atua em clínica, hospital ou instituição de saúde",ch:[]},{l:"Equipamento validado",d:"Confirmar se a informação de equipamento da campanha é verídica",ch:[]},{l:"Reclassificação",d:"Lead migra para o motor correto conforme o perfil identificado",ch:["→ Motor 2","→ Motor 3"]}],migrate:"Equipamento validado → Motor 2 / CNPJ identificado sem confirmação de equipamento → Motor 3"}
+};
+function sel(n){
+  document.querySelectorAll('.mc').forEach(function(c,i){c.classList.toggle('on',i+1===n);});
+  var d=dt[n];
+  var stg=d.stages.map(function(s){
+    var chips=s.ch&&s.ch.length?'<div class="chips">'+s.ch.map(function(c){return '<span class="ch" style="background:'+d.obsbg+';color:'+d.obscol+'">'+c+'</span>';}).join('')+'</div>':'';
+    return '<div class="sr"><div class="sdot" style="background:'+d.color+'"></div><div><div class="sn">'+s.l+'</div><div class="ss">'+s.d+'</div>'+chips+'</div></div>';
+  }).join('');
+  var mg=d.migrate?'<div class="mb">Critério de migração: '+d.migrate+'</div>':'';
+  document.getElementById('det').innerHTML=
+    '<div class="dtop"><div class="dtit" style="color:'+d.color+'">'+d.title+'</div></div>'+
+    '<div class="obs" style="background:'+d.obsbg+';color:'+d.obscol+';border-color:'+d.color+'">'+d.obs+'</div>'+
+    '<div class="etlabel">Etapas</div>'+
+    '<div class="sl">'+stg+'</div>'+mg;
+}
+sel(1);
+</script>
